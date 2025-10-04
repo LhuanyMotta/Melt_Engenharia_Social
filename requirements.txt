@@ -1,0 +1,5 @@
+# Este projeto não requer dependências externas além do Python padrão
+# O servidor usa apenas módulos built-in do Python
+
+# Para referência, versão do Python:
+Python>=3.6

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Realizado - Portal Acadêmico</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: #202124;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background-color: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .success-icon {
+            font-size: 64px;
+            color: #34a853;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #1a73e8;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #5f6368;
+        }
+        
+        .warning-box {
+            background-color: #fff8e1;
+            border: 1px solid #ffd54f;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        .warning-box h3 {
+            color: #ff9800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        
+        .btn:hover {
+            background-color: #0d47a1;
+        }
+        
+        .btn-secondary {
+            background-color: #f1f3f4;
+            color: #5f6368;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #dadce0;
+        }
+        
+        .disclaimer {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: rgba(26, 115, 232, 0.05);
+            border-radius: 6px;
+            font-size: 12px;
+            color: #5f6368;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">✅</div>
+        <h1>Login Realizado com Sucesso!</h1>
+        <p>Bem-vindo(a) ao Portal Acadêmico.</p>
+        
+        <div class="warning-box">
+            <h3>⚠️ ATENÇÃO: Esta é uma Simulação Educacional</h3>
+            <p><strong>Você acabou de cair em um exercício de phishing controlado!</strong></p>
+            <p>Em um cenário real, suas credenciais teriam sido roubadas.</p>
+            
+            <h4 style="margin-top: 15px; color: #1a73e8;">Lições de Segurança:</h4>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>✅ Sempre verifique a URL do site</li>
+                <li>✅ Confirme o remetente de e-mails</li>
+                <li>✅ Use autenticação de dois fatores</li>
+                <li>✅ Desconfie de solicitações urgentes</li>
+            </ul>
+        </div>
+        
+        <p>Esta atividade faz parte de um exercício educativo sobre segurança digital e engenharia social ética.</p>
+        
+        <div>
+            <button class="btn" onclick="window.location.href='/'">Tentar Novamente</button>
+            <button class="btn btn-secondary" onclick="closePage()">Fechar Página</button>
+        </div>
+        
+        <div class="disclaimer">
+            <strong>Propósito Educacional:</strong> Esta simulação visa conscientizar sobre técnicas de phishing e promover práticas seguras online.
+        </div>
+    </div>
+
+    <script>
+        function closePage() {
+            window.close();
+        }
+        
+        // Exibir alerta educacional
+        setTimeout(function() {
+            alert('📚 LIÇÃO DE SEGURANÇA:\n\nEm um ataque real de phishing:\n• Suas credenciais seriam roubadas\n• Suas contas poderiam ser comprometidas\n• Seus dados pessoais estariam em risco\n\nSempre verifique a autenticidade dos sites antes de inserir informações sensíveis!');
+        }, 1000);
+    </script>
+</body>
+</html>

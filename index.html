@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Acadêmico - Acesso ao Sistema</title>
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #0d47a1;
+            --accent-color: #fbbc05;
+            --light-color: #f8f9fa;
+            --dark-color: #202124;
+            --error-color: #ea4335;
+            --success-color: #34a853;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: var(--dark-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            display: flex;
+            max-width: 1000px;
+            width: 100%;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .info-section {
+            flex: 1;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .info-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .info-section p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .features {
+            margin-top: 30px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .feature i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+        
+        .login-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .logo p {
+            color: #5f6368;
+            font-size: 14px;
+        }
+        
+        .login-form {
+            width: 100%;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #5f6368;
+        }
+        
+        input[type="email"],
+        input[type="password"],
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 50px 12px 15px; /* Espaço fixo para o botão */
+            border: 1px solid #dadce0;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: all 0.3s;
+            height: 48px; /* Altura fixa */
+            line-height: 24px;
+        }
+        
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="text"]:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+            outline: none;
+        }
+        
+        .password-container {
+            position: relative;
+            min-height: 48px; /* Altura mínima fixa */
+        }
+        
+        .toggle-password {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #5f6368;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 6px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        
+        .toggle-password:hover {
+            background-color: #f1f3f4;
+        }
+        
+        .toggle-password:active {
+            background-color: #e8eaed;
+        }
+        
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .remember-me {
+            display: flex;
+            align-items: center;
+        }
+        
+        .remember-me input {
+            margin-right: 8px;
+            width: 16px;
+            height: 16px;
+        }
+        
+        .forgot-password {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            height: 48px;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .divider {
+            text-align: center;
+            margin: 25px 0;
+            position: relative;
+            color: #5f6368;
+        }
+        
+        .divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: #dadce0;
+            z-index: 1;
+        }
+        
+        .divider span {
+            background-color: white;
+            padding: 0 15px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1px solid #dadce0;
+            background-color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .social-btn:hover {
+            background-color: #f8f9fa;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #5f6368;
+        }
+        
+        .signup-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+        
+        .alert {
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .alert-error {
+            background-color: rgba(234, 67, 53, 0.1);
+            border: 1px solid var(--error-color);
+            color: var(--error-color);
+        }
+        
+        .alert-success {
+            background-color: rgba(52, 168, 83, 0.1);
+            border: 1px solid var(--success-color);
+            color: var(--success-color);
+        }
+        
+        .disclaimer {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: rgba(26, 115, 232, 0.05);
+            border-radius: 6px;
+            font-size: 12px;
+            color: #5f6368;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .info-section, .login-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="info-section">
+            <h2>Portal Acadêmico</h2>
+            <p>Acesse todos os recursos educacionais em um só lugar:</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <i>✔</i> <span>Acesso ao material didático</span>
+                </div>
+                <div class="feature">
+                    <i>✔</i> <span>Calendário acadêmico</span>
+                </div>
+                <div class="feature">
+                    <i>✔</i> <span>Notas e histórico escolar</span>
+                </div>
+                <div class="feature">
+                    <i>✔</i> <span>Biblioteca virtual</span>
+                </div>
+                <div class="feature">
+                    <i>✔</i> <span>Comunicação com professores</span>
+                </div>
+            </div>
+            
+            <p style="margin-top: 30px;">Faça login para continuar</p>
+        </div>
+        
+        <div class="login-section">
+            <div class="logo">
+                <h1>Portal Acadêmico</h1>
+                <p>Entre com suas credenciais institucionais</p>
+            </div>
+            
+            <div class="alert alert-error" id="errorAlert">
+                E-mail ou senha incorretos. Tente novamente.
+            </div>
+            
+            <div class="alert alert-success" id="successAlert">
+                Login realizado com sucesso! Redirecionando...
+            </div>
+            
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="email">E-mail institucional</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@dominio.edu" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" placeholder="Sua senha" required>
+                        <button type="button" class="toggle-password" id="togglePassword" title="Mostrar senha">👁️</button>
+                    </div>
+                </div>
+                
+                <div class="remember-forgot">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Lembrar de mim</label>
+                    </div>
+                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                </div>
+                
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+            
+            <div class="divider">
+                <span>Ou entre com</span>
+            </div>
+            
+            <div class="social-login">
+                <button class="social-btn" type="button">G</button>
+                <button class="social-btn" type="button">f</button>
+                <button class="social-btn" type="button">in</button>
+            </div>
+            
+            <div class="signup-link">
+                Não tem uma conta? <a href="#">Solicitar acesso</a>
+            </div>
+            
+            <div class="disclaimer">
+                <strong>Atenção:</strong> Esta é uma página educacional simulada para fins de conscientização sobre segurança digital. Não insira suas credenciais reais.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            const togglePassword = document.getElementById('togglePassword');
+            const passwordInput = document.getElementById('password');
+            const errorAlert = document.getElementById('errorAlert');
+            const successAlert = document.getElementById('successAlert');
+            
+            // Alternar visibilidade da senha - CORRIGIDO
+            togglePassword.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type');
+                if (type === 'password') {
+                    passwordInput.setAttribute('type', 'text');
+                    this.innerHTML = '🔒';
+                    this.title = 'Ocultar senha';
+                } else {
+                    passwordInput.setAttribute('type', 'password');
+                    this.innerHTML = '👁️';
+                    this.title = 'Mostrar senha';
+                }
+                
+                // Manter o foco no campo de senha
+                passwordInput.focus();
+            });
+            
+            // Processar envio do formulário
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                
+                // Simular validação
+                if (!email || !password) {
+                    showAlert(errorAlert, 'Por favor, preencha todos os campos.');
+                    return;
+                }
+                
+                // Mostrar loading
+                const submitBtn = loginForm.querySelector('.btn');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Entrando...';
+                submitBtn.disabled = true;
+                
+                // Enviar dados para o servidor
+                fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+                })
+                .then(response => {
+                    if (response.ok) {
+                        showAlert(successAlert, 'Login realizado com sucesso! Redirecionando...');
+                        setTimeout(() => {
+                            window.location.href = '/success';
+                        }, 1500);
+                    } else {
+                        throw new Error('Erro no servidor');
+                    }
+                })
+                .catch(error => {
+                    showAlert(errorAlert, 'Erro ao conectar com o servidor. Tente novamente.');
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+            });
+            
+            function showAlert(alertElement, message) {
+                // Esconder todos os alertas
+                errorAlert.style.display = 'none';
+                successAlert.style.display = 'none';
+                
+                // Mostrar o alerta específico
+                alertElement.textContent = message;
+                alertElement.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
