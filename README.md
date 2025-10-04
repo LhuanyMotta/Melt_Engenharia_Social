@@ -15,8 +15,8 @@
 * [🎯 Objetivos Educacionais](#-objetivos-educacionais)  
 * [⚠️ Regras Éticas Obrigatórias](#️-regras-éticas-obrigatórias)  
 * [🚀 Como Executar o Projeto](#-como-executar-o-projeto)  
-* [🌐 Opção A: GitHub Codespaces](#-opção-a:-github-codespaces)  
-* [🌐 Opção B: Ngrok (Alternativa Rápida)](#-opção-b:-ngrok-alternativa-rápida)  
+  * [🌐 Opção A — GitHub Codespaces](#-opção-a--github-codespaces-recomendado)  
+  * [🌐 Opção B — Ngrok (Alternativa Rápida)](#-opção-b--ngrok-alternativa-rápida)  
 * [📁 Estrutura do Projeto](#-estrutura-do-projeto)  
 * [🔧 Funcionalidades Técnicas](#-funcionalidades-técnicas)  
 * [📊 Saída do Sistema](#-saída-do-sistema)  
@@ -27,7 +27,6 @@
 * [📷 Imagens da Aplicação](#-imagens-da-aplicação)  
 * [🙋‍♀️ Autoria](#-autoria)  
 * [📄 Licença](#-licença)
-
 
 ---
 
