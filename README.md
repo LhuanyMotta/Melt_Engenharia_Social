@@ -66,14 +66,55 @@ O objetivo é demonstrar técnicas de engenharia social de forma ética, promove
 ### 🔧 Pré-requisitos
 
 * Python **3.6+**
-* **Ngrok** instalado
 * Navegador web moderno
+* Opção A: Conta GitHub (para Codespaces)
+* Opção B: Ngrok instalado (para execução local)
 
-### 🌐 Ativando o Ngrok
+### 🌐 Opção A: GitHub Codespaces (Recomendado)
+
+#### Execução Instantânea sem Configuração
+
+1. Acesse o Repositório:
+
+```bash
+https://github.com/LhuanyMotta/Melt_Engenharia_Social
+```
+
+2. Abra no Codespaces:
+
+* Clique no botão "Code" verde
+* Selecione a aba "Codespaces"
+* Clique "Create codespace on main"
+
+3. Execute o Servidor:
+
+```bash
+# No terminal do Codespace:
+python server.py
+```
+
+4. Compartilhe o Link:
+
+* Vá na aba "Ports"
+* Porta 8000 → Visibility: Public
+* Copie o link (ex: https://abc123-8000.app.github.dev)
+* Compartilhe com os participantes
+
+### ✅ Vantagens do Codespaces:
+
+* ✅ Não precisa instalar nada
+* ✅ Ambiente pré-configurado
+* ✅ Execução imediata
+* ✅ Link HTTPS automático
+* ✅ Ideal para demonstrações rápidas
+
+### 🌐 Opção B: Ngrok (Alternativa Rápida)
+
+#### 🔧 Ativando o Ngrok
 
 O **Ngrok** cria um túnel seguro entre sua máquina local e a internet, permitindo que outras pessoas acessem sua página de simulação.
 
-### 🔧 Instalação do Ngrok
+### 📥 Instalação do Ngrok
 
 #### Opção 1 — Usar o ngrok diretamente na pasta do repositório
 
@@ -124,6 +165,12 @@ ngrok version 3.30.0
 ```
 
 > Observação: essas instruções cobrem a opção de instalar o ngrok em uma pasta permanente no Windows. Em macOS/Linux, recomenda-se mover o binário para uma pasta do PATH (por exemplo `/usr/local/bin`) e ajustar permissões com `chmod +x ngrok`.
+
+### ✅ Vantagens do Ngrok:
+
+* ✅ Controle total local
+* ✅ Links mais curtos
+* ✅ Bom para testes prolongados
 
 ---
 
