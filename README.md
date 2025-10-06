@@ -75,9 +75,9 @@ O objetivo é demonstrar técnicas de engenharia social de forma ética, promove
 
 ### 🌐 Opção A: GitHub Codespaces (Recomendado)
 
-#### Execução Instantânea sem Configuração
+#### Execução Instantânea - Requer Fork
 
-1. Acesse o Repositório:
+1. Acesse o Repositório e faça o Fork do Repositório:
 
 ```bash
 https://github.com/LhuanyMotta/Melt_Engenharia_Social
