@@ -132,7 +132,7 @@ O **Ngrok** cria um túnel seguro entre sua máquina local e a internet, permiti
 ```
 1. Se preferir, baixe diretamente em https://ngrok.com/download
 2. Extraia o arquivo e adicione ao **PATH** do sistema  
-3. Configure o token de autenticação *(opcional, mas recomendado):
+3. Configure o token de autenticação (opcional, mas recomendado):
 > ngrok config add-authtoken SEU_TOKEN_AQUI
 ```
 
