@@ -351,7 +351,7 @@ O desenvolvedor **NÃO** se responsabiliza por:
 
 ![Tela Melt\_Engenharia\_Social4](imagens/Melt_Engenharia_Social4.png)
 
-> 💡 *Demonstrativo doMelt_Engenharia_Social - Terminal*
+> 💡 *Demonstrativo do Melt_Engenharia_Social - Terminal*
 
 ![Tela Melt\_Engenharia\_Social5](imagens/Melt_Engenharia_Social5.png)
 
