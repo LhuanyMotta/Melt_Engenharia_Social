@@ -38,7 +38,7 @@
 
 ## 📋 Descrição do Projeto
 
-Simulação educacional de uma página de **phishing controlada**, desenvolvida para a disciplina de **Segurança da Informação**.
+Simulação educacional de uma página de **phishing controlada**.
 O objetivo é demonstrar técnicas de engenharia social de forma ética, promovendo a **conscientização sobre ataques de phishing**.
 
 ---
